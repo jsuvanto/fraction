@@ -16,18 +16,19 @@ class Fraction {
     Fraction(int p, int q); // Fraction = p/q
 
     // Methods
-    std::string get_string();
-    int get_numerator();
-    int get_denominator();
-    double get_double();
+    std::string get_string() const;
+    int get_numerator() const;
+    int get_denominator() const;
+    double get_double() const;
     void simplify();
-    void expand(const int expander);
+    void expand(int expander);
+
 
     // Operators
-    Fraction operator+(const Fraction f);
-    Fraction operator-(const Fraction f);
-    Fraction operator*(const Fraction f);
-    Fraction operator/(const Fraction f);
+    Fraction operator+(const Fraction &f) const;
+    Fraction operator-(const Fraction &f) const;
+    Fraction operator*(const Fraction &f) const;
+    Fraction operator/(const Fraction &f) const;
     bool operator==(Fraction f);
 
   private:
@@ -59,30 +60,31 @@ Fraction::Fraction(int p): p_(p), q_(1) {
  * \param p The numerator.
  * \param q The denominator.
  * \pre q != 0
+ * \post q_ > 0
  *
- * Creates a Fraction object with numerator p and denominator q.
+ * Creates a Fraction object with numerator p and denominator q. Sign of the
+ * fraction is only stored in the numerator.
  */
 Fraction::Fraction(int p, int q): p_(p), q_(q) {
+    p_ = abs(p_);       // Remove sign from both numerator
+    q_ = abs(q_);       // and denominator
+    if (p * q < 0) {
+        p_ = -p_;       // Return sign to numerator if necessary
+    }
 }
 
 
 /*!
  * \brief Gets a string representation of the fraction.
- * \return A string "p/q" where p is the numerator and q is the denominator.
- *
- * If the fraction's value is negative, a minus sign is prepended.
+ * \return A string in the format "-p/q", where "-" stands for the sign
+ * in case of negative values, "p" is the numerator and "q" is the denominator.
+ * \post String format is correct.
  */
-std::string Fraction::get_string() {
+std::string Fraction::get_string() const{
     std::string fract = "";
-    // Sign of the fraction shall only printed once with the numerator.
-    // This preserves the sign of both numerator and denominator, only the
-    // string representation is affected!
-    if (p_ * q_ < 0) {
-        fract.append("-");
-    }
-    fract.append(std::to_string(abs(p_)));
+    fract.append(std::to_string(p_));   // Numerator contains the sign
     fract.append("/");
-    fract.append(std::to_string(abs(q_)));
+    fract.append(std::to_string(q_));
     return fract;
 }
 
@@ -91,7 +93,7 @@ std::string Fraction::get_string() {
  * \brief Gets the numerator of the fraction.
  * \return The numerator
  */
-int Fraction::get_numerator() {
+int Fraction::get_numerator() const {
     return p_;
 }
 
@@ -100,7 +102,7 @@ int Fraction::get_numerator() {
  * \brief Gets the denominator of the fraction.
  * \return The denominator.
  */
-int Fraction::get_denominator() {
+int Fraction::get_denominator() const {
     return q_;
 }
 
@@ -109,7 +111,7 @@ int Fraction::get_denominator() {
  * \brief Gets a decimal approximation of the fraction.
  * \return A decimal value.
  */
-double Fraction::get_double() {
+double Fraction::get_double() const {
     double fract = double(p_) / double(q_);
     return fract;
 }
@@ -117,12 +119,12 @@ double Fraction::get_double() {
 
 /*!
  * \brief Simplifies the fraction.
- * \post Fraction is simplified.
+ * \post q_ > 0
  */
 void Fraction::simplify() {
     int a = p_;
     int b = q_;
-    // Euclidean method for finding the greatest common divisor of a and b
+    // Euclidean method for finding the greatest common divisor of a and b.
     while (b != 0) {
         int tmp = a;
         a = b;
@@ -130,12 +132,19 @@ void Fraction::simplify() {
     }
     p_ = p_/a;
     q_ = q_/a;
+    // Change the sign from the denominator to the numerator.
+    // This relies on the fact that if q_ is negative, p_ isn't.
+    if (q_ < 0) {
+        p_ = -p_;
+        q_ = -q_;
+    }
 }
 
 
 /*!
- * \brief Expands the fraction.
+ * \brief Expands the fraction by a positive number.
  * \param expander The expander.
+ * \pre expander > 0
  * \post Fraction is expanded.
  *
  * Multiplies the numerator and the denominator with expander.
@@ -150,8 +159,9 @@ void Fraction::expand(const int expander) {
  * \brief Sums two fractions
  * \param f A second fraction.
  * \return The unsimplified sum of two fractions.
+ * \post new_q > 0
  */
-Fraction Fraction::operator+(const Fraction f) {
+Fraction Fraction::operator+(const Fraction &f) const {
     int new_p = p_ * f.q_ + q_ * f.p_;  // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
@@ -162,8 +172,9 @@ Fraction Fraction::operator+(const Fraction f) {
  * \brief Substracts a fraction from another fraction.
  * \param f A second fraction.
  * \return The unsimplified difference of two fractions.
+ * \post new_q > 0
  */
-Fraction Fraction::operator-(const Fraction f) {
+Fraction Fraction::operator-(const Fraction &f) const {
     int new_p = p_ * f.q_ - q_ * f.p_;  // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
@@ -174,8 +185,9 @@ Fraction Fraction::operator-(const Fraction f) {
  * \brief Multiplies two fractions together
  * \param f A second fraction.
  * \return The unsimplified product of two fractions.
+ * \post new_q > 0
  */
-Fraction Fraction::operator*(const Fraction f) {
+Fraction Fraction::operator*(const Fraction &f) const {
     int new_p = p_ * f.p_;               // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
@@ -186,8 +198,9 @@ Fraction Fraction::operator*(const Fraction f) {
  * \brief Divides a fraction with another fraction.
  * \param f A second fraction.
  * \return The unsimplified quotient of two fractions.
+ * \post new_q > 0
  */
-Fraction Fraction::operator/(const Fraction f) {
+Fraction Fraction::operator/(const Fraction &f) const {
     int new_p = p_ * f.q_;              // New numerator
     int new_q = q_ * f.p_;              // New denominator
     return Fraction(new_p, new_q);

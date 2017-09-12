@@ -86,27 +86,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FRACTION_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FRACTION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classFraction.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFraction.html">Fraction</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Constructors.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>();             <span class="comment">// Fraction = 1/1</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(<span class="keywordtype">int</span> p);        <span class="comment">// Fraction = p/1</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> q); <span class="comment">// Fraction = p/q</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Methods</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string <a class="code" href="classFraction.html#a9056ea0a53696e8d793d17cb8b34e8f6">get_string</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFraction.html#a4a22ea9dcc3fa6b9fe4623c0d1b261ec">get_numerator</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFraction.html#a8a0c1c41ad95d3fc00c4a98f936dfe54">get_denominator</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFraction.html#a807eb65cd4f851daa29ff9f5cefd4120">get_double</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFraction.html#ad82bf1476350f5f64b9676c200c0a139">expand</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> expander);</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classFraction.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFraction.html">Fraction</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Constructors.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>();             <span class="comment">// Fraction = 1/1</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(<span class="keywordtype">int</span> p);        <span class="comment">// Fraction = p/1</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> q); <span class="comment">// Fraction = p/q</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// Methods</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::string <a class="code" href="classFraction.html#a47fe2e111f7b4e50ce619d249a741ad9">get_string</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFraction.html#a32962f77dfe31e77bae6907b405ad2d1">get_numerator</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFraction.html#ac4f6bd7a987a4d1f831b97d1fb548eed">get_denominator</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFraction.html#aaac349dc1db3f52ab65180e6bc8f2abe">get_double</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFraction.html#afe200522f4b634c81f0329a0d594f492">expand</a>(<span class="keywordtype">int</span> expander);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Operators</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a955b080199260b125b39641a385ab231">operator+</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#add465eaa9e4047a5d75771abbdc4aa9f">operator-</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a462f102d7e85ca1555d3cfc07a7c9f2d">operator*</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#adb4a2f2e5165dc4412d2895d3e33fdbc">operator/</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#af6f5312c5d769beda68414d9fc65621e">operator+</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#ada63b3a94e1d6d9a1cfa7fb30d4d70fb">operator-</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a125f228903233090659b09b24b6be815">operator*</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a7a300b25a89494d93dc6d09c77948f3c">operator/</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">operator==</a>(<a class="code" href="classFraction.html">Fraction</a> f);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">private</span>:</div>
@@ -122,113 +123,118 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classFraction.html#a04af767dfaf29174e58ae98165c2ffe3">   66</a></span>&#160;<a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction::Fraction</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> q): p_(p), q_(q) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classFraction.html#a9056ea0a53696e8d793d17cb8b34e8f6">   76</a></span>&#160;std::string <a class="code" href="classFraction.html#a9056ea0a53696e8d793d17cb8b34e8f6">Fraction::get_string</a>() {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::string fract = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// Sign of the fraction shall only printed once with the numerator.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// This preserves the sign of both numerator and denominator, only the</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// string representation is affected!</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (p_ * q_ &lt; 0) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        fract.append(<span class="stringliteral">&quot;-&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    fract.append(std::to_string(abs(p_)));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    fract.append(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    fract.append(std::to_string(abs(q_)));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> fract;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classFraction.html#a04af767dfaf29174e58ae98165c2ffe3">   68</a></span>&#160;<a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction::Fraction</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> q): p_(p), q_(q) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    p_ = abs(p_);       <span class="comment">// Remove sign from both numerator</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    q_ = abs(q_);       <span class="comment">// and denominator</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (p * q &lt; 0) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        p_ = -p_;       <span class="comment">// Return sign to numerator if necessary</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classFraction.html#a47fe2e111f7b4e50ce619d249a741ad9">   83</a></span>&#160;std::string <a class="code" href="classFraction.html#a47fe2e111f7b4e50ce619d249a741ad9">Fraction::get_string</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string fract = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    fract.append(std::to_string(p_));   <span class="comment">// Numerator contains the sign</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    fract.append(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    fract.append(std::to_string(q_));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> fract;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classFraction.html#a4a22ea9dcc3fa6b9fe4623c0d1b261ec">   95</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classFraction.html#a4a22ea9dcc3fa6b9fe4623c0d1b261ec">Fraction::get_numerator</a>() {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> p_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classFraction.html#a32962f77dfe31e77bae6907b405ad2d1">   96</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classFraction.html#a32962f77dfe31e77bae6907b405ad2d1">Fraction::get_numerator</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> p_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classFraction.html#a8a0c1c41ad95d3fc00c4a98f936dfe54">  104</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classFraction.html#a8a0c1c41ad95d3fc00c4a98f936dfe54">Fraction::get_denominator</a>() {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> q_;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classFraction.html#ac4f6bd7a987a4d1f831b97d1fb548eed">  105</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classFraction.html#ac4f6bd7a987a4d1f831b97d1fb548eed">Fraction::get_denominator</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> q_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classFraction.html#a807eb65cd4f851daa29ff9f5cefd4120">  113</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classFraction.html#a807eb65cd4f851daa29ff9f5cefd4120">Fraction::get_double</a>() {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">double</span> fract = double(p_) / double(q_);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> fract;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classFraction.html#aaac349dc1db3f52ab65180e6bc8f2abe">  114</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classFraction.html#aaac349dc1db3f52ab65180e6bc8f2abe">Fraction::get_double</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">double</span> fract = double(p_) / double(q_);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> fract;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">  123</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">Fraction::simplify</a>() {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">int</span> a = p_;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">int</span> b = q_;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Euclidean method for finding the greatest common divisor of a and b</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">while</span> (b != 0) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">int</span> tmp = a;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        a = b;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        b = tmp % a;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    p_ = p_/a;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    q_ = q_/a;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classFraction.html#ad82bf1476350f5f64b9676c200c0a139">  144</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFraction.html#ad82bf1476350f5f64b9676c200c0a139">Fraction::expand</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> expander) {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    p_ = p_ * expander;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    q_ = q_ * expander;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classFraction.html#a955b080199260b125b39641a385ab231">  155</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a955b080199260b125b39641a385ab231">Fraction::operator+</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f) {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_ + q_ * f.p_;  <span class="comment">// New numerator</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classFraction.html#add465eaa9e4047a5d75771abbdc4aa9f">  167</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#add465eaa9e4047a5d75771abbdc4aa9f">Fraction::operator-</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f) {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_ - q_ * f.p_;  <span class="comment">// New numerator</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classFraction.html#a462f102d7e85ca1555d3cfc07a7c9f2d">  179</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a462f102d7e85ca1555d3cfc07a7c9f2d">Fraction::operator*</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.p_;               <span class="comment">// New numerator</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classFraction.html#adb4a2f2e5165dc4412d2895d3e33fdbc">  191</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#adb4a2f2e5165dc4412d2895d3e33fdbc">Fraction::operator/</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> f) {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_;              <span class="comment">// New numerator</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.p_;              <span class="comment">// New denominator</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">  124</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">Fraction::simplify</a>() {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">int</span> a = p_;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">int</span> b = q_;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// Euclidean method for finding the greatest common divisor of a and b.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">while</span> (b != 0) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">int</span> tmp = a;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        a = b;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        b = tmp % a;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    p_ = p_/a;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    q_ = q_/a;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">// Change the sign from the denominator to the numerator.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// This relies on the fact that if q_ is negative, p_ isn&#39;t.</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (q_ &lt; 0) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        p_ = -p_;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        q_ = -q_;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classFraction.html#afe200522f4b634c81f0329a0d594f492">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFraction.html#afe200522f4b634c81f0329a0d594f492">Fraction::expand</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> expander) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    p_ = p_ * expander;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    q_ = q_ * expander;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classFraction.html#af6f5312c5d769beda68414d9fc65621e">  164</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#af6f5312c5d769beda68414d9fc65621e">Fraction::operator+</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_ + q_ * f.p_;  <span class="comment">// New numerator</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classFraction.html#ada63b3a94e1d6d9a1cfa7fb30d4d70fb">  177</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#ada63b3a94e1d6d9a1cfa7fb30d4d70fb">Fraction::operator-</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_ - q_ * f.p_;  <span class="comment">// New numerator</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classFraction.html#a125f228903233090659b09b24b6be815">  190</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a125f228903233090659b09b24b6be815">Fraction::operator*</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.p_;               <span class="comment">// New numerator</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.q_;              <span class="comment">// New denominator</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">  203</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">Fraction::operator==</a>(<a class="code" href="classFraction.html">Fraction</a> f) {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    f.<a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (p_ == f.p_ &amp;&amp; q_ == f.q_) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#endif // FRACTION_H</span></div>
-<div class="ttc" id="classFraction_html_a4a22ea9dcc3fa6b9fe4623c0d1b261ec"><div class="ttname"><a href="classFraction.html#a4a22ea9dcc3fa6b9fe4623c0d1b261ec">Fraction::get_numerator</a></div><div class="ttdeci">int get_numerator()</div><div class="ttdoc">Gets the numerator of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:95</div></div>
-<div class="ttc" id="classFraction_html_a462f102d7e85ca1555d3cfc07a7c9f2d"><div class="ttname"><a href="classFraction.html#a462f102d7e85ca1555d3cfc07a7c9f2d">Fraction::operator*</a></div><div class="ttdeci">Fraction operator*(const Fraction f)</div><div class="ttdoc">Multiplies two fractions together. </div><div class="ttdef"><b>Definition:</b> fraction.h:179</div></div>
-<div class="ttc" id="classFraction_html_a8b29fbb830eb343b981ed9de8e25130c"><div class="ttname"><a href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">Fraction::operator==</a></div><div class="ttdeci">bool operator==(Fraction f)</div><div class="ttdoc">Compares the equivalence of two fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:203</div></div>
-<div class="ttc" id="classFraction_html_ad82bf1476350f5f64b9676c200c0a139"><div class="ttname"><a href="classFraction.html#ad82bf1476350f5f64b9676c200c0a139">Fraction::expand</a></div><div class="ttdeci">void expand(const int expander)</div><div class="ttdoc">Expands the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:144</div></div>
-<div class="ttc" id="classFraction_html"><div class="ttname"><a href="classFraction.html">Fraction</a></div><div class="ttdoc">A class for creating fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:11</div></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classFraction.html#a7a300b25a89494d93dc6d09c77948f3c">  203</a></span>&#160;<a class="code" href="classFraction.html">Fraction</a> <a class="code" href="classFraction.html#a7a300b25a89494d93dc6d09c77948f3c">Fraction::operator/</a>(<span class="keyword">const</span> <a class="code" href="classFraction.html">Fraction</a> &amp;f)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">int</span> new_p = p_ * f.q_;              <span class="comment">// New numerator</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">int</span> new_q = q_ * f.p_;              <span class="comment">// New denominator</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction</a>(new_p, new_q);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">  215</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">Fraction::operator==</a>(<a class="code" href="classFraction.html">Fraction</a> f) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    f.<a class="code" href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span> (p_ == f.p_ &amp;&amp; q_ == f.q_) {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif // FRACTION_H</span></div>
+<div class="ttc" id="classFraction_html_a125f228903233090659b09b24b6be815"><div class="ttname"><a href="classFraction.html#a125f228903233090659b09b24b6be815">Fraction::operator*</a></div><div class="ttdeci">Fraction operator*(const Fraction &amp;f) const </div><div class="ttdoc">Multiplies two fractions together. </div><div class="ttdef"><b>Definition:</b> fraction.h:190</div></div>
+<div class="ttc" id="classFraction_html_af6f5312c5d769beda68414d9fc65621e"><div class="ttname"><a href="classFraction.html#af6f5312c5d769beda68414d9fc65621e">Fraction::operator+</a></div><div class="ttdeci">Fraction operator+(const Fraction &amp;f) const </div><div class="ttdoc">Sums two fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:164</div></div>
+<div class="ttc" id="classFraction_html_a8b29fbb830eb343b981ed9de8e25130c"><div class="ttname"><a href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">Fraction::operator==</a></div><div class="ttdeci">bool operator==(Fraction f)</div><div class="ttdoc">Compares the equivalence of two fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:215</div></div>
+<div class="ttc" id="classFraction_html_a32962f77dfe31e77bae6907b405ad2d1"><div class="ttname"><a href="classFraction.html#a32962f77dfe31e77bae6907b405ad2d1">Fraction::get_numerator</a></div><div class="ttdeci">int get_numerator() const </div><div class="ttdoc">Gets the numerator of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:96</div></div>
+<div class="ttc" id="classFraction_html"><div class="ttname"><a href="classFraction.html">Fraction</a></div><div class="ttdoc">A class for creating fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:10</div></div>
 <div class="ttc" id="classFraction_html_a29efaf0ef03cceab0bfa637e9eea2b7b"><div class="ttname"><a href="classFraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b">Fraction::Fraction</a></div><div class="ttdeci">Fraction()</div><div class="ttdoc">Default constructor. </div><div class="ttdef"><b>Definition:</b> fraction.h:45</div></div>
-<div class="ttc" id="classFraction_html_a6a5092eb855dac602718b19eb7fe0d6d"><div class="ttname"><a href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">Fraction::simplify</a></div><div class="ttdeci">void simplify()</div><div class="ttdoc">Simplifies the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:123</div></div>
-<div class="ttc" id="classFraction_html_a8a0c1c41ad95d3fc00c4a98f936dfe54"><div class="ttname"><a href="classFraction.html#a8a0c1c41ad95d3fc00c4a98f936dfe54">Fraction::get_denominator</a></div><div class="ttdeci">int get_denominator()</div><div class="ttdoc">Gets the denominator of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:104</div></div>
-<div class="ttc" id="classFraction_html_a9056ea0a53696e8d793d17cb8b34e8f6"><div class="ttname"><a href="classFraction.html#a9056ea0a53696e8d793d17cb8b34e8f6">Fraction::get_string</a></div><div class="ttdeci">std::string get_string()</div><div class="ttdoc">Gets a string representation of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:76</div></div>
-<div class="ttc" id="classFraction_html_a955b080199260b125b39641a385ab231"><div class="ttname"><a href="classFraction.html#a955b080199260b125b39641a385ab231">Fraction::operator+</a></div><div class="ttdeci">Fraction operator+(const Fraction f)</div><div class="ttdoc">Sums two fractions. </div><div class="ttdef"><b>Definition:</b> fraction.h:155</div></div>
-<div class="ttc" id="classFraction_html_adb4a2f2e5165dc4412d2895d3e33fdbc"><div class="ttname"><a href="classFraction.html#adb4a2f2e5165dc4412d2895d3e33fdbc">Fraction::operator/</a></div><div class="ttdeci">Fraction operator/(const Fraction f)</div><div class="ttdoc">Divides a fraction with another fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:191</div></div>
-<div class="ttc" id="classFraction_html_a807eb65cd4f851daa29ff9f5cefd4120"><div class="ttname"><a href="classFraction.html#a807eb65cd4f851daa29ff9f5cefd4120">Fraction::get_double</a></div><div class="ttdeci">double get_double()</div><div class="ttdoc">Gets a decimal approximation of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:113</div></div>
-<div class="ttc" id="classFraction_html_add465eaa9e4047a5d75771abbdc4aa9f"><div class="ttname"><a href="classFraction.html#add465eaa9e4047a5d75771abbdc4aa9f">Fraction::operator-</a></div><div class="ttdeci">Fraction operator-(const Fraction f)</div><div class="ttdoc">Substracts a fraction from another fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:167</div></div>
+<div class="ttc" id="classFraction_html_a6a5092eb855dac602718b19eb7fe0d6d"><div class="ttname"><a href="classFraction.html#a6a5092eb855dac602718b19eb7fe0d6d">Fraction::simplify</a></div><div class="ttdeci">void simplify()</div><div class="ttdoc">Simplifies the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:124</div></div>
+<div class="ttc" id="classFraction_html_aaac349dc1db3f52ab65180e6bc8f2abe"><div class="ttname"><a href="classFraction.html#aaac349dc1db3f52ab65180e6bc8f2abe">Fraction::get_double</a></div><div class="ttdeci">double get_double() const </div><div class="ttdoc">Gets a decimal approximation of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:114</div></div>
+<div class="ttc" id="classFraction_html_a7a300b25a89494d93dc6d09c77948f3c"><div class="ttname"><a href="classFraction.html#a7a300b25a89494d93dc6d09c77948f3c">Fraction::operator/</a></div><div class="ttdeci">Fraction operator/(const Fraction &amp;f) const </div><div class="ttdoc">Divides a fraction with another fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:203</div></div>
+<div class="ttc" id="classFraction_html_ac4f6bd7a987a4d1f831b97d1fb548eed"><div class="ttname"><a href="classFraction.html#ac4f6bd7a987a4d1f831b97d1fb548eed">Fraction::get_denominator</a></div><div class="ttdeci">int get_denominator() const </div><div class="ttdoc">Gets the denominator of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:105</div></div>
+<div class="ttc" id="classFraction_html_ada63b3a94e1d6d9a1cfa7fb30d4d70fb"><div class="ttname"><a href="classFraction.html#ada63b3a94e1d6d9a1cfa7fb30d4d70fb">Fraction::operator-</a></div><div class="ttdeci">Fraction operator-(const Fraction &amp;f) const </div><div class="ttdoc">Substracts a fraction from another fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:177</div></div>
+<div class="ttc" id="classFraction_html_afe200522f4b634c81f0329a0d594f492"><div class="ttname"><a href="classFraction.html#afe200522f4b634c81f0329a0d594f492">Fraction::expand</a></div><div class="ttdeci">void expand(int expander)</div><div class="ttdoc">Expands the fraction by a positive number. </div><div class="ttdef"><b>Definition:</b> fraction.h:152</div></div>
+<div class="ttc" id="classFraction_html_a47fe2e111f7b4e50ce619d249a741ad9"><div class="ttname"><a href="classFraction.html#a47fe2e111f7b4e50ce619d249a741ad9">Fraction::get_string</a></div><div class="ttdeci">std::string get_string() const </div><div class="ttdoc">Gets a string representation of the fraction. </div><div class="ttdef"><b>Definition:</b> fraction.h:83</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

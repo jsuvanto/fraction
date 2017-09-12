@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['expand',['expand',['../classFraction.html#ad82bf1476350f5f64b9676c200c0a139',1,'Fraction']]]
+  ['expand',['expand',['../classFraction.html#afe200522f4b634c81f0329a0d594f492',1,'Fraction']]]
 ];
