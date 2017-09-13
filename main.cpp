@@ -1,9 +1,10 @@
 // The purpose of this file is to do some rudimentary tests to the class.
 
-#include <iostream>
-#include <fraction.h>
+#include "fraction.h"
 
-using namespace std;
+#include <iostream>
+using std::cout;
+using std::endl;
 
 int main() {
 
