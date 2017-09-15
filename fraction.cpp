@@ -1,5 +1,6 @@
-#include <iostream>
 #include "fraction.h"
+
+#include <iostream>
 
 using std::abs;
 using std::string;
@@ -14,17 +15,15 @@ Fraction::Fraction(int p): p_(p), q_(1) {
 
 
 Fraction::Fraction(int p, int q): p_(p), q_(q) {
-    p_ = abs(p_);       // Remove sign from both numerator
-    q_ = abs(q_);       // and denominator
-    if (p * q < 0) {
-        p_ = -p_;       // Return sign to numerator if necessary
-    }
+    int sign = p*q/(abs(p*q);   // -1 if negative, 1 if positive.
+    q_ = abs(q_);               // Remove sign from denominator.
+    p_ = sign * abs(p_);        // Store sign in numerator.
 }
 
 
 string Fraction::get_string() const{
     string fract = "";
-    fract.append(to_string(p_));   // Numerator contains the sign
+    fract.append(to_string(p_));    // Numerator contains the sign.
     fract.append("/");
     fract.append(to_string(q_));
     return fract;
@@ -56,14 +55,7 @@ void Fraction::simplify() {
         a = b;
         b = tmp % a;
     }
-    p_ = p_/a;
-    q_ = q_/a;
-    // Change the sign from the denominator to the numerator.
-    // This relies on the fact that if q_ is negative, p_ isn't.
-    if (q_ < 0) {
-        p_ = -p_;
-        q_ = -q_;
-    }
+    return Fraction(p_/a, q_/a);
 }
 
 
