@@ -36,7 +36,7 @@ class Fraction {
      * \param p The numerator.
      * \param q The denominator.
      * \pre q != 0
-     * \post q_ > 0
+     * \post q > 0
      *
      * Creates a Fraction object with numerator p and denominator q. Sign 
      * of the fraction is only stored in the numerator.
@@ -80,7 +80,7 @@ class Fraction {
 
     /*!
      * \brief Simplifies the fraction.
-     * \post q_ > 0
+     * \post q > 0
      */
     void simplify();
 
@@ -103,36 +103,37 @@ class Fraction {
      * \brief Sums two fractions
      * \param f A second fraction.
      * \return The unsimplified sum of two fractions.
-     * \post new_q > 0
+     * \post q > 0
      */
-    Fraction operator+(const Fraction &f) const;
+    Fraction operator+(const Fraction& f) const;
 
 
     /*!
      * \brief Subtracts two fractions.
      * \param f A second fraction
      * \return The unsimplified difference of two fractions.
-     * \post new_q > 0
+     * \post q > 0
      */
-    Fraction operator-(const Fraction &f) const;
+    Fraction operator-(const Fraction& f) const;
 
 
     /*!
      * \brief Multiplies two fractions together
      * \param f A second fraction.
      * \return The unsimplified product of two fractions.
-     * \post new_q > 0
+     * \post q > 0
      */
-    Fraction operator*(const Fraction &f) const;
+    Fraction operator*(const Fraction& f) const;
 
 
     /*!
      * \brief Divides a fraction with another fraction.
      * \param f A second fraction.
      * \return The unsimplified quotient of two fractions.
-     * \post new_q > 0
+     * \pre f != 0
+     * \post q > 0
      */
-    Fraction operator/(const Fraction &f) const;
+    Fraction operator/(const Fraction& f) const;
 
 
     /*!
@@ -140,7 +141,7 @@ class Fraction {
      * \param f A second fraction.
      * \return A boolean truth value.
      */
-    bool operator==(Fraction f);
+    bool operator==(const Fraction& f) const;
 
 
   private:

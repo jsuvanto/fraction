@@ -73,38 +73,36 @@ void Fraction::expand(const int expander) {
 }
 
 
-Fraction Fraction::operator+(const Fraction &f) const {
+Fraction Fraction::operator+(const Fraction& f) const {
     int new_p = p_ * f.q_ + q_ * f.p_;  // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
 }
 
 
-Fraction Fraction::operator-(const Fraction &f) const {
+Fraction Fraction::operator-(const Fraction& f) const {
     int new_p = p_ * f.q_ - q_ * f.p_;  // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
 }
 
 
-Fraction Fraction::operator*(const Fraction &f) const {
+Fraction Fraction::operator*(const Fraction& f) const {
     int new_p = p_ * f.p_;               // New numerator
     int new_q = q_ * f.q_;              // New denominator
     return Fraction(new_p, new_q);
 }
 
 
-Fraction Fraction::operator/(const Fraction &f) const {
+Fraction Fraction::operator/(const Fraction& f) const {
     int new_p = p_ * f.q_;              // New numerator
     int new_q = q_ * f.p_;              // New denominator
     return Fraction(new_p, new_q);
 }
 
 
-bool Fraction::operator==(Fraction f) {
-    simplify();
-    f.simplify();
-    if (p_ == f.p_ && q_ == f.q_) {
+bool Fraction::operator==(const Fraction& f) const {
+    if (p_*f.q_ == q_*f.p_) {
         return 1;
     } else {
         return 0;

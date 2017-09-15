@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a300b25a89494d93dc6d09c77948f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFraction.html#a7a300b25a89494d93dc6d09c77948f3c">operator/</a> (const <a class="el" href="classFraction.html">Fraction</a> &amp;f) const </td></tr>
 <tr class="memdesc:a7a300b25a89494d93dc6d09c77948f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides a fraction with another fraction.  <a href="#a7a300b25a89494d93dc6d09c77948f3c">More...</a><br/></td></tr>
 <tr class="separator:a7a300b25a89494d93dc6d09c77948f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b29fbb830eb343b981ed9de8e25130c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFraction.html#a8b29fbb830eb343b981ed9de8e25130c">operator==</a> (<a class="el" href="classFraction.html">Fraction</a> f)</td></tr>
-<tr class="memdesc:a8b29fbb830eb343b981ed9de8e25130c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the equivalence of two fractions.  <a href="#a8b29fbb830eb343b981ed9de8e25130c">More...</a><br/></td></tr>
-<tr class="separator:a8b29fbb830eb343b981ed9de8e25130c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5641baca082878e4d07041d7a2069f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFraction.html#ae5641baca082878e4d07041d7a2069f5">operator==</a> (const <a class="el" href="classFraction.html">Fraction</a> &amp;f) const </td></tr>
+<tr class="memdesc:ae5641baca082878e4d07041d7a2069f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the equivalence of two fractions.  <a href="#ae5641baca082878e4d07041d7a2069f5">More...</a><br/></td></tr>
+<tr class="separator:ae5641baca082878e4d07041d7a2069f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for creating fractions. </p>
@@ -220,7 +220,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>q != 0 </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>q_ &gt; 0</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0</dd></dl>
 <p>Creates a <a class="el" href="classFraction.html" title="A class for creating fractions. ">Fraction</a> object with numerator p and denominator q. Sign of the fraction is only stored in the numerator. </p>
 
 </div>
@@ -348,7 +348,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The unsimplified product of two fractions. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>new_q &gt; 0 </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -374,7 +374,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The unsimplified sum of two fractions. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>new_q &gt; 0 </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The unsimplified difference of two fractions. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>new_q &gt; 0 </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0 </dd></dl>
 
 </div>
 </div>
@@ -426,20 +426,21 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The unsimplified quotient of two fractions. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>new_q &gt; 0 </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>f != 0 </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0 </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a8b29fbb830eb343b981ed9de8e25130c"></a>
+<a class="anchor" id="ae5641baca082878e4d07041d7a2069f5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool Fraction::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFraction.html">Fraction</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classFraction.html">Fraction</a> &amp;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -469,7 +470,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Simplifies the fraction. </p>
-<dl class="section post"><dt>Postcondition</dt><dd>q_ &gt; 0 </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>q &gt; 0 </dd></dl>
 
 </div>
 </div>
